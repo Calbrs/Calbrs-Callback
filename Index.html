@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calbrs Music Player Callback</title>
+</head>
+<body>
+    <h1>Callback Successful</h1>
+    <p>If you are seeing this page, the callback URL is working.</p>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+
+        if (token) {
+            window.location.href = 'calbrs://authcallback?token=' + token;
+        }
+    </script>
+</body>
+</html>
